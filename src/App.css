@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+
+:root {
+  --background-color-wh: #FFFFFF;
+  --primary-color-rd: #DD1A1A;
+  --secondary-color-bl: #0C0C0C;
+  --text-primary-bl: #212121;
+  --text-secondary-gr: rgb(90, 89, 89);
+  --text-terciary-gr: rgb(178, 166, 166);
+  --border-btn: #1e1e1e;
+  --sun: rgba(255, 255, 0, 0.579);
+  --hoverCard: #DD1A1A;
+  --background-color-bl: #1e1e1e;
+  --moves-color:  #DD1A1A;
+  --bckg-pokeball: #1e1e1e;
+  --bckg-card: #fff;
+}
+
+[data-theme='dark'] {
+  --background-color-wh: #1e1e1e;
+  --primary-color-rd: #0D0221;
+  --secondary-color-bl: #2490f1;
+  --text-primary-bl: #FFFFFF;
+  --text-secondary-gr: rgb(90, 89, 89);
+  --text-terciary-gr: rgb(126, 120, 120);
+  --border: #26408B;
+  --border-btn: #FFFFFF;
+  --sun: #FFFFFF;
+  --hoverCard: gold;
+  --background-color-bl: #fff;
+  --moves-color: #2490f1;
+  --bckg-pokeball: #fff;
+  --bckg-card: rgb(211, 207, 207);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color-wh);
+}
+
+.drk-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 100;
+  color: var(--sun);
+}
+
+
+/* ------Header------ */
+.header {
+  width: auto;
+  position: relative;
+}
+.red {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color-rd);
+  height: 67px;
+}
+.dex {
+  position: absolute;
+  width: 215px;
+  height: 45px;
+  left: 20px;
+  top: 30px;
+}
+.black {
+  width: 100%;
+  position: absolute;
+  top: 64px;
+  height: 25px;
+  background-color: var(--secondary-color-bl)
+}
+.white-circle {
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  width: 58.5px;
+  height: 58.5px;
+  right: 38px;
+  top: 30px;
+  background: #FFFFFF;
+  border: 9px solid var(--secondary-color-bl)
+}
+.black-circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  right: 53px;
+  top: 46px;
+  background-color: var(--bckg-pokeball);
+  border: 7px solid var(--secondary-color-bl)
+}
+
+/* --------Footer------- */
+.redFooter {
+  position: absolute;
+  width: 100%;
+  height: 62px;
+  left: 0px;
+  bottom: 25px;
+  background: var(--primary-color-rd)
+}
+.blackFooter {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  left: 0px;
+  bottom: 0;
+  background: var(--secondary-color-bl)
+}
+.white-circleFooter {
+  position: absolute;
+  border-radius: 50%;
+  width: 58.5px;
+  height: 58.5px;
+  right: 120px;
+  bottom: 10px;
+  background: #FFFFFF;
+  border: 12px solid var(--secondary-color-bl);
+}
+.black-circelFooter {
+  position: absolute;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  right: 135px;
+  bottom: 25px;
+  background: var(--bckg-pokeball);
+  border: 12px solid var(--secondary-color-bl);
+}
+
+              /* -----COMPONENTS--- */
+
+
+/* ----Input Name----- */
+.InputName-content {
+  padding-bottom: 200px;
+  height: 100%;
+}
+.img-ball {
+  max-width: 100vw;
+  position: relative;
+  bottom: -28vh;
+  overflow: hidden;
+  z-index: 10;
+}
+.ball {
+  max-width: 100vw;
+  bottom: 100px;
+}
+.imgFront {
+  max-width: 100%;
+}
+.InputName {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.input-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.input-text>h2 {
+  padding-top: 2rem;
+}
+
+.input {
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: medium;
+}
+.start-btn {
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: medium;
+  background-color: var(--moves-color);
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+.start-btn:hover {
+  transition: .7s;
+  background-color:gold;
+  box-shadow: 1px 1px 3px 2px gray;
+}
+
+
+
+/* --- Pokedex----- */
+.Pokedex-container {
+  position: relative;
+  top: 89px;
+  background-color: var(--background-color-wh);
+}
+.text-and-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+.welcome-message {
+  color: var(--moves-color);
+  padding: 1rem;
+}
+.welcome-text {
+  color: var(--text-primary-bl);
+  font-size: medium;
+  font-weight: 400;
+}
+.form-SearchPokemon {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+.pkdx-inputSearch {
+  height: 2rem;
+  padding: .3rem;
+  border-radius: .5rem;
+  box-shadow: .5px 2px 4px .2px var(--text-terciary-gr)
+}
+.pkdx-btn {
+  height: 2rem;
+  padding: .25rem;
+  border-radius: .5rem;
+  color:#FFFFFF;
+  text-shadow: 1px 1px 1px black;
+  border: var(--border-btn) 2px solid;
+  background-color: var(--moves-color);
+  font-size: large;
+}
+.pkdx-btn:hover{
+  transition: .7s;
+  background-color:gold;
+  box-shadow: 1px 1px 3px 2px gray;
+} 
+
+.all-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all-cards {
+  display: flex;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* ---PokemonCard--- */
+.singleCard {
+  border: 5px solid var(--background-color-bl);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bckg-card);
+}
+.singleCard:hover {
+  transition: .7s;
+  height: 460px;
+  box-shadow: 0px 0px 6px 5px var(--hoverCard)
+}
+.singleCard:hover .pokemonsSize {
+  position: relative;
+  top: -28px;
+}
+.types-text {
+  padding-top: 1rem;
+}
+.type-text {
+  color: var(--text-secondary-gr);
+  padding: 0 0 1rem;
+  font-size: large
+}
+.pokemon-stats-container {
+  padding-bottom: 1.8rem;
+}
+.pokemon-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.all-pagination {
+  position: relative;
+}
+.pags-btn {
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  gap: .5rem;
+}
+.page-byOne {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color-rd);
+  border-radius: 50%;
+  padding: .5rem;
+  font-size: x-large;
+  color: var(--background-color-bl);
+  border: 2px solid var(--background-color-bl);
+}
+.page-num {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: .5rem;
+  font-size: x-large;
+}
+.fivePages-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color-rd);
+}
+.fivePages-btn {
+  padding: 1rem;
+  color: #1e1e1e;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+
+/* ---PokedexId--- */
+.goBack-btn{
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  min-width: 74px;
+  z-index: 200;
+  background-color: var(--moves-color);
+  color: #fff;
+  padding: .4rem;
+  border-radius: 1rem;
+}
+.pkdx{
+  position: absolute;
+  right: 30px;
+  top: 160px;
+  padding: .2rem;
+  border-radius: 50%;
+  z-index: 200;
+  background-color: var(--moves-color);
+  color: #fff;
+   border-radius: 1rem;
+}
+
+.prev{
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  width: 74px;
+  z-index: 200;
+  background-color: var(--moves-color);
+  color: #fff;
+  padding: .4rem 0;
+  border-radius: 1rem;
+}
+.goBack-btn:hover{
+  transition: 1s;
+  font-size: xx-large;
+  box-shadow: .2px .2px 2px 2px var(--background-color-bl);
+}
+.pkdx:hover{
+  font-size: medium;
+}
+.pokedexId-main-container {
+  background-color: var(--background-color-wh);
+  color: var(--background-color-bl);
+}
+.pokedexId-container {
+  position: relative;
+  top: 110px;
+  background-color: var(--background-color-wh);
+  color: var(--background-color-bl);
+}
+.pkdx-mainInfo {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pkdx-mainInfo:hover {
+  color: gold;
+  text-shadow: 3px 3px 3px black;
+  font-size: larger;
+  transition: .7s;
+}
+.singlePokemon-size {
+  width: 50%;
+  z-index: 100;
+  max-width: 500px;
+  box-shadow: 1px 1px 10px 2px black;
+  border-radius: 50%;
+}
+.pkdx-mainInfo:hover .singlePokemon-size {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7c1cfff2-db8d-44cd-8a13-cb2a4162fae6/dd2zouo-047f7b3f-b895-43ac-82a4-abb6ca12c52a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdjMWNmZmYyLWRiOGQtNDRjZC04YTEzLWNiMmE0MTYyZmFlNlwvZGQyem91by0wNDdmN2IzZi1iODk1LTQzYWMtODJhNC1hYmI2Y2ExMmM1MmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EFI6YQ0acRLpYHzupMAxV_N4KMcpNWT-_3RJ4TV-4eU');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 1px 10px 2px gold;
+  position: relative;
+  bottom: 15px;
+  transition: 1s;
+}
+.pkdx-secondaryInfo {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.pkdx-secondaryInfo:hover{
+  font-size: x-large;
+  transition: .7s;
+}
+.grayLetters{
+  font-size:x-large;
+  color:gainsboro;
+  text-shadow: 1px 2px 2px #0C0C0C;
+}
+.pkdx-terciaryInfo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.pkdx-typeInfo {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.skills-descr{
+  max-width: 160px;
+  width: 160px;
+  box-shadow: 2px 2px 2px 1px black;
+  text-align: center;
+  border-radius: 1rem;
+}
+.skills-descr:hover{
+  transition: 1s;
+ position: relative;
+ bottom: 4px ;
+  box-shadow: 1px 1px 3px 3px gold;
+}
+.stats-title{
+display: flex;
+justify-content: center;
+padding: 2rem;
+font-size: xx-large;
+}
+.single-stat {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+.general-bar {
+  position: relative;
+  height: 50px;
+  width: 300px;
+  background-color: rgb(230, 225, 225);
+  border-radius: 1rem;
+}
+.space-btw-stats:hover {
+  font-size: large;
+}
+.space-btw-stats:hover .stats{
+  font-size: xx-large;
+}
+.space-btw-stats:hover .general-bar{
+  box-shadow: .1px .1px 3px 2px var(--background-color-bl);
+  transition: .5s;
+}
+.space-btw-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.text-single-stat {
+  width: 200px;
+  text-align: right;
+}
+.stat-types-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.general-moves-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 1rem;
+}
+.moves-list{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 1rem 1rem 1rem;
+}
+.single-move{
+  width: 150px;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgb(230, 225, 225);
+  color: #1e1e1e;
+}
+.single-move:hover{
+  width: 150px;
+  text-align: center;
+  border-radius: 1rem 0;
+  background-color:var(--moves-color);
+  color: #1e1e1e;
+  transition: 1s;
+  box-shadow: .1px .1px 4px 4px gold;
+}
+
+
+/* ---Loader--- */
+.loader-img {
+  max-width: 100%;
+}
+
+
+/* ---PokemonNotFounded */
+.pokemonNotFounded{
+  position: relative;
+  top: 88px;
+  background-color: var(--background-color-wh);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  height: calc(100vh - 88px) ;
+  gap: 1rem
+}
+.text-pokemonNotFounded{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: var(--text-primary-bl);
+}
+.btn-backToPokedex{
+  background-color: var(--moves-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px black;
+  font-size: medium;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-backToPokedex:hover{
+  transition: .7s;
+  box-shadow: .2px .2px 2px 5px var(--background-color-bl);
+}
+
+.charizard{
+  min-width: 300px;
+  width: 60vw;
+  max-width: 600px;
+  border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Pokemon types */
+
+.normal {
+  background-image: url('https://img.freepik.com/free-photo/petal-texture-background-peach-blog-banner_53876-119792.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(246, 176, 151);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.fighting {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30751457-a50b-4f4c-a9f2-5a8ee5504f89/d6avgvi-e9cdad2e-8423-43c7-bfb1-6b1929b96d3c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNzUxNDU3LWE1MGItNGY0Yy1hOWYyLTVhOGVlNTUwNGY4OVwvZDZhdmd2aS1lOWNkYWQyZS04NDIzLTQzYzctYmZiMS02YjE5MjliOTZkM2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9pvENWNy7L2Js0B1lhqZeF2ruvF3pjfnUJgk1SkF-Z4');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e3d7b3;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.flying {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/176622e8-bf4c-4d60-9a64-b75cff245c16/d6ada67-356f47fc-c8fe-49b7-b59a-313219d7022c.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: lightskyblue;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.fire {
+  background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMWFRUVFRUVFRUWFxUVFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lICUtLS0tLS0tLS8vLS0tLS0tLS0tLS0tLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALEBHAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EAD8QAAECBAMFBAgDCAIDAQAAAAEAAgMEESESMUEFUWFxgTKRodEGEyJCUrHB8BRy4RUjM2KCkqLxU7LC0uJD/8QAGgEAAwEBAQEAAAAAAAAAAAAAAgMEAQUABv/EADERAAIBAwEFBwUBAAIDAAAAAAABAgMRITEEEkFR8BMyYXGRodEigbHB4fFCYgUUI//aAAwDAQACEQMRAD8A+SsRWobERinZ2YhmozEJiNDCXIqgg0MJuDDQoLFpS8KqnnI6NGnctChpqHDJTkns3V5oPFbMtHhQuywE73KCpWtorlEp7uErmZJ7EivyYeeQ7yteB6NkdtzW9aocfbbzbFQbhZK/jScz3qWTrS4pdeIp9tLil7/n4NqHsuCPfryTEOThaFYLJvinIEySpp058ZMVKlU4yZtw5NiYhyQ0S8hDc5bsCBh7Rpw1/RQ1JNYuc6tUcHbeuLwpADidyY/B77cEw2LoBT5rgkORE6k28i4ggZBEbBTTIauGgLyTYLmAZBRQxQ+YaNe5CE5WuFtaCpqVqSB+p5GWMqrxXMYKucOWvcsePPvIJrYUrTSthksqLMF1Q0F1ASdLDM0Hmn091J4v4vh9uP3Gw2aUtWbE/tprBVrd4BOVR/sLym1doRYtRfD3N8laJHc43cG2N6VyFhW5vks6KC7Op8VTSp2d3qdXZ9lhTzbJnxJMZue0cvaPhZAe2GNHO52C1P2a92TSudsJ9AaC9bYmjLmVaqseMi/toLDl7owokbc0DpU95Sz2PdvXoZPZUR8VsNvq2k6uIw2FbkV3JKehPfEc4tHaNQyzBS3s8FRCor4GKpFuy8/gxY0tlcZX4Gp/RAEqDrXkPqtiJIEmzTwABK47Oij3COdvn+ieqi5npbr1YjCloYzBPW/gDVCnpqHfCwDxPkE5E2fENvZ6PafkUs/YMU6eDj8gjjKF7yYqbSVo2PPzEWvBJPXpIvo9F3fP6hKRNhxNwVcKsOZBUozlwMEhCW1E2O8bv8vJB/ZJ+JvdE/8AVOU48ySezVL6GYxFYhMRoYRMVANDCahBAYm5ZlUiRfSWR+Tg1XpNnyVBXVZ+zoFLpyPtPCKN71z6zlJ2idRRaVkORmBvackY003RZ8WZLjcoYqgVK2oSjzHTMFXhklAgwqr0uxdkOdn7LTQnfTfT6mgQVZxgrs9UqRgrsSkZRziLL1uzthhtDENP5Rd5/p06osGYgwBRna1cLn+7yohnbG4DrdcurWqVO6sHMq1qtXEFZG1CFBRgDBzqTzK40GZWGdpPdqfl8kSEx7v1UcqbWZET2eUcyZr/AIhu+vJXE6BkO9ZzQ0ZuryV2zA90eaW48gHSXL9Gj+KefuiE+JvP31SuJx4eCkNGrh8/khsCoJfwu55IJAsKVOeeWaViFxzqjVaNSfBDdFbo3vNUSGxw8IVewoQlnHKp5VKcMR2YAA30HzKG6aPxE8jT77k5NjlKXAA3Zbjm0040b80x+yBUkAYdKknvIt4qrYziaDzPefomXS7iysRwZQ1q673VtRozKPelfUyc5p5lbrkAfLNFi9oG5tXfK3iuhybHGzYj+Nmjrn80GZnYcMDDQm9fWVJGnYA6rNjT0WLiLQ9wYMTgOy1u+g0TYxnJYx5hwp1JK6dlz09vlo32SEG+L1baXIrjKXdGk25kn+lo8TUryUWYiaNp081mzEzE3nvVENkctZFEdibf1Tfr/p6+Z2jKjLxBd4Vp4LImtsQh2HEflhQh45ry0d7tVnxYxVtPYo87+nwPVCFPVt+ef0ejmdr1/wD1iffJyzY0605vd1/2sR8YoD4quhQUdP18HnXUdEasWOz4vBKxIkP4z3LNe9CJKpjT8SWptLfA0Hlnx/4FCwt+PwclbNu7uQzNO5cExRJpVlxS9/kCwJhgQmBGCJiYKwaGFr7OhXWVAC24BwsrvU9V4OnsqzcbmJmgwhJesqgFxJTEvDqQEjdUUWKTkwkNqcgwP9qYcEDMdPM/QeC3tnSADfWxrM91uRdyGgU1Wooq4Up7iuydkyFsdmtGb3f+I3puc2jQYWAhu85u4pObm3xThaKNbkBYAcdFLIQsHkupkG5Aczn0UTjd3n6dcfQQ43e9P064+3LwiE97japT8CXAu53QXP6dUEOdSlmjdlb6o8CXLjn98zRLmzJvHIchzLW9kDnmfLxKuZonOp60HcFaHsw60/ub9CjNlWDNw71E5Q4EbnS4ZBMincO6vzR2vdvKkRIY496lsw3QeAS3ngLbv/xLt3q1SrQ3g6fJFY9tQBc9AEtsU5PkUEE0xE0v92XEhoBFS69aiwGlFZ8Sppe1s0xLSZcvXBcrL6jPc1zs/wBEeBswm5sNSbBa/qocPP2nbtAk5wvfcmg0rYDojz/Pnl1cWq7liOEKRZpkO0MX+I59BosyZMR1zUV1Nb/UrRZAPutJPxEV7hkPFOwdluN3A9UUHbRXGqpClnj79dWPJPluBd4BKTUy6ECK4aiha2xI/mO5er2jDDRRtK7/ACXjtpytya1VmzzU39R0Nnqqrrp19vYxZudc43J+iz4kQpqZZRIRF2IJLQ6OisgcV6UiFHiJd6oiS1GAcgxFoRJIiEIjqjE6jAWmjgM3B3A2ok8O4VTou+hHNAMPRUdEp2R11RojN5Hz+SEWitb+ATVYnkmhaITXihJmKBxrzQvVncmJkso5LtRWhBajMchY2A3LC61pl2TRoFjwHXW9LQBhMR3ZB7zuCmq4dzp7N3WheFB1NhvTUHc3v1SxiYj9Ny2NkQwDiIqBvy6qeo7K7K42Swel2XAIgQxGuxhLoUKgxFzrknWlyl52cDn1f7VPcBo0DcSPp3pSLttxDmtbVxtjzIbTsgZC+vRZToh951OH6KCNF7zlLq/WXq+YuFF7zlLHl4/i/qzd/FtdENAxjSSWsdeGwUrTK5tmVaHPvdkGgcGgDxWCJoDIV5+S4zjjqtdDwGdjHkek/GYdRXgAhOnzvWAI6KxxNKAmpoOJ3DjcIOwSPdjFZNts8Vds2SsmGSCQRe4oa1B81oSTLioxcK0zFvFLnBJXMlFJXNOC4YQ7F7WKmGlqU7VcuicgQqCrrDdqUvBY2GKm7vAeZ8ApbHDne26gvfNRyze2hHP6r2060GnzOgsNyhryUg2LU2WvLMENoe4Vcbsad3/I4btw1QSjui5x3F4j8nLBoxPtuGvMp0TRI9kW4ZrzceacTmSTmiQZp4yJr4BIlSbySz2aUvqbybLgQcTiGDiQCeQuetEGJtFldXHhRo77uPgkWyr3mp7ym4Oy2jtOvuFz3I4uMOul7MBxpx7zu/Dq/uHgbSJ3AcBfvNT4oM3tCI+wrTgixXQoYv3G57sh1WTObcpZoA45leW/N8/MylS33eEPUI+WdSryGjjn3LC2s+G0WqeJshTm2ieJ3n6BZe0YkSJhDmBha2hzaXX7Thp3K+jQkmnJnVoUJxd5vr8sypyLUpMtqtKJLtbmfp8s+i7HCENxxEPBbgGH2XD3jUahdOMrLCLm1YQiBxaGGlGkkGgxX3u3JV7WjPwv4+SLEjk/f0yCA6ETUqiOBMrcCkSYJaG3IBNKkkCudBkFwnHBrAcJDH42ggXNrOOrbZIZIHH5IMR3BNUUyWbKzsy6I9zyGguJJDRhaK6AaBKPO9Gcxxy8FH4F2opzsnRskSSUnohUxNyDjK0TIHeqfgk1SQiVKoJNRWoIcpD1rFxaHYL7rcnI3sshjINBP5nXP0C83Cetkv8AaJ4AjqAp6kco6GzTwxyWbcC1yKk5deC1ZiJChihdiOjW2YOLnZuPAd6xIB1KBGj1KnlT3mW76jEdizzjwG4WCq16Ra5Fa9a420PRqXHWvRA5KsKagjM1pS451GXz6JUkURldBWFMQ61QK1NQMPAEmnUmvFauzpF0Q6mpud5PFIm7K7DcrK7CyEq55AAqtxjGwm16V37w3hxT0KSZAhYn5HoYh+Bu5m86rzG0Nol7ifAZAaADcufd13jRESk68sd0bjTiEIxKzoZLivT7J2K5zcRHLjvRVNykrsZUcKUbyGdgSONwLshc8aaLSjSzojyTqe4aBamyZDAMlrNgsGlVAlKpJyTSXicGttn/ANG19jAdsS++uVNyag7HDe0acM/9LWixaDRo8PM9FkTm1ITP5uHZHmilTUeb88L0X1NeOFzQiNWtUwuv0GwNFmgk9578h0QI0N1MwwcMzzOvesab9KCLNoBwWPH2pFie9hDsi44a8hmUKozemF11grpbFVeXZeeTT2gGDN4++Cw4rmVqASK5uNGeZ5Ie1tswi791DwjCGuxHFUg3cAagab1iR517jmd3Hkr6OzSSz16fJ1aFCSjd3+9v1+maE1MMaTQjk0Yf/o9SFnTE+52VuNrfQfNLRHAZ3O4fU/fRLRHk+Witp0kitQSOixep3n7+aXoSiiHvTEvKvecLGknh9ToqLpK5582X2bKwjjMWJgwsc5gwl2Nw7LLZc0lFxRCGgcmgV8NVrGTgwv4r8bvghn/s/IdKpeZ2y4DDDaITdzbE/meblDGTbvHPnp9sXf45MVJ8tOvv+uTFf2QW3iubD4H2n/2jLrRVDYI7LMVNXmxP5W6dUv62uZUicY3in2k9fgBbi1GGQHusO4Cg8E7B2IczQLKi+kLvdoKCgWdM7YiOzcT1RqnUfgKntFOPG56l8hCb2orB18kpEhy1f43+Ll5J86UP17k6NF8WSy22PIVDlcISu1UHKTDQytWE+rQendkshhTcvF0SpK5ZQnZmlHjUFAlMaG965pS1GyKZVHJjDCjw0swpliCQ+mx2DTVHaUlDKdhNU8i6Dubvo9sp0Z4aBVfT5XY8GWh4n0JAvu5LzXoBEa1rna5V7lPpZtwu9hpsuNWlKpVcEv54/By9q7XaK/YxxFamJ6VbbMWIdwsBoAsGDDc4rW2b6PRY3t0wMr23+y3o459Kr2WxvR+XZSrsbv7W+Z8E51qdGO5HLLJ7RR2aO4uHBdYMf0Z9H3PcCQvoUCSAoKUAFAoliyG3Km6lhRRM7dhsGiRBUan1Vp242s3jlbmfP7TtNXaJ4XkONgJDaG1IcIXcAeFz+i8xtr0vJqGmi8lNzz33e7COOZ5NTWk8UU4rm9fty9blGz/+MnP6quFyPQbX9JsVQ23GtT3rBjzDzd7sI45nk3M+A4rOfOhvYFP5jd3TRvS/FKOiFxuc9TU96Onsyjovn3/p3KOzxpq0Vb8mi+faLMF/jdc8wMm+J4oZ2gQIjMLH48NYjhiczCa1Y+tq5FJwZdzstMzkBzOil8RrOz7R+I5D8o+pTlCK66+PAdux66/ngQYdquNB4nkECJMaNFB4nmVDy5xqbneiwJIu0TUrahCobVOyWznvIa1pcToPqtiU2MGt9ZGOFg0953Lckto7ap7ML920ZUz6lB2rm7U/Xh/RfaXuoZ8eH9KRpaHCJ9acTh7rT/2dp0SM5tlxGBtGM+FlgfzHN3VZsxMkmpKTfEVMKPGWX1ov9FTqJdfjphokdLxI6C+IgPcqowJJ1h2enmvDA2G1hYzC4itYh+N3FZ74iq5yh4TYxUcIjlNso5yG/NGbDJyUvo3iUxCWr5Ber3qtlD3qmJEJbSKBSCqgqQtFxYVFYUFpVgULGxY0H1UtKACiMS2iiMrjUNyOxyWhtTbIaXIsp3GIDwExDi1KRxgKWRkmUblcalsHuNhzpbCIBoodtRjPaa0RHj33irGn+VnvHie5eYhTBIArQE+Sl8fEbWaMhw3nidVE9mi5NviNtFvzPVSe1YsV4xPc4m36AaDgLL2ZjMl2txEF+ZbqBoDu+a+b7HnHwnYmWdSxpUiuo3HitaG977k2zLj8+JUlfZ4vwQmvs6m1wiuXH4/fgb20fSF7yST5dFhTc643JoOP0GqDHmGt7Nz8R+gWc6IS6rrhFTopZ/0bRoRgvpViz5nd3nPpuUNY53H71V5SVxVdk0ZuOQ4NGp4fLNOOngAWQwMNqk0vQ5k5AGmXTm1u2IjXKztFCcOTJ5GwOdTuA1WjGkoTKOeCz2R+7DsT3EC7nH3ATemlaJR+1sNS3tH3qZcGjQJB0wXGpNSvbs5POF118GWnJ5dl11+LDMzMF9gA1oyaLAeZ4lWltmOcukpepXqtmSYpU2CXVq9mrICrVVKOBCR9HCc1qPlIUuzG+nAakpif2w2C3joF4Hbe2nxXEuPIaJFKFXaHnCJIdrXd5O0fdl9ubZdFcSTbQaBecjRqqIsaqXcV2aVJRVkh05pK0dDi5BcVLlQhUJEspMo9CcUYtVCxGieSYAq8OHVMQYFSrTVGigRXyD2eN5i74tBQJWIVzyquRpE053BlQiNhq+EbvBGJ3WKBXCoEQImLiXaVdCqrNQDUwzExDASzEUFAyiDsOCNTJQ6MUriUgoN1FHasPjV2uQGlGhNQtBRk2NwHFacnLkpSUhb1tyrHOs0dApaj5HUoxxcal2sZ/M7wHmmmtfE5dwCp+DMMVfmPdGnN2Q5JSbnXZE0G4fd+aj3d7QO+93fUce6G2w9o7/dHTVJ46mtMTt9aBvdSnySDppKRp05V8u5MjRZt1FZZrx5oUAJrTJos0efTvSMWYJ5aAWA6LNMwrwySmqkogKotEOByalmVKVgNJXrvR2RgijokRg4YglVpqnG7DnVUI7zGdj7LNMbsh4o89tDCKC25bcba8qxmEvaRuFPovI7X2jKurhL/AA+q5tPfqzvKLsc+jKdad5xduGMGDtWeLiSSsGNEqnp1zSfZr1SjZYldqnFJFdS7whYrhDWlB2c4mgBJOQAqT0XoZD0NjEYogbBZ8UZ3q/B1/BbOtCHedhM4KOZtLzPHtlkUSZ3L6BL7DkGfxJrGd0Jop/c6qvNTWzIYo2G9x3kivjZK/wDav3Yt/b5BvDhGT+1l72PnX4M7kSFs1xOS9kRKPNGtjtOtA13e3QcTQKxhSsK7ZtrSR2Qx74n5cTKsaeNbJirt4s7m2p8nflZ/q55SZ2UYQq/2Scm+93aLLiSTnXpbfp3r0c/EIGNkIYST+9e4RCTz7IPClV5+YmnONSS48a07lRT3mKqbrQsNn9eV+85BDfAYNQeV/HLuBXTMdxzPTToFnxYhVEUyGpKEdEEjRBog41RxUUTEiSUm2ABRGoa4FaTp5DhqK0ILHorSN6Fj4NBQpBXNaN6M0AZE3FDTcdELKIoHVcEQMbv8QEQ4K3OmQ30tmEIxR5stLMaScTsFASLVqdAm5WH/AL8t6Tgxw01aL8aEf2m3emYUQk1Fst5y5pckyijKODdkGNJ4an9F6SHtiFBZhhNGI5vJ9r+kDLvrxXjIbjvR2NJUVWip946GJpJo0pvaBdl5fK/ikIj6XceiHHmw0UCzI0wSmQpcjalaMcDMearZK40HErYqJqjYkdVyd2HbbNXD6pTHVMy4XmgozvhGhKBaBj0FklBKOyAXKeSu8l8dLAo0yShwoTnL0my/RGLEGM0Yz43+yP6Rm7ovX7H2NCh/woXrH/8AJFFQOLWZDmUie0whiOX4dfJNV2iEL3d7cv2+Hu/A8lsX0Pjxhiw4WfG/2W95z6L0H7EkZdtYsR0Z3wsIa3+43W3tScd6sNiPaQ0k4rUBOlu0b5BeJ2vGB9q4bveQ2v3uFUhTnUetl6ddYEU6lSs8vdX/AF+Xn0sX2h6WFlWy0OHAb8TGjGebz7S8lN7SixHVc5znHUkk+KpPTza0B60IA47z3BYsaZJ1twy++a6NHZ4xyl156hTqU6Xc/vrqejdNQ4TAS7HFOguxg5ntusb9kcTlmRNruyGlb5m/HNZWIqWp8aSWueuv9yTy2iTNIT8QgguOE3I0J30Q3TW5KtCtgJRqKRnaSOdMm988/wBUvEmiNVWK8ZDv8kH1RP39ExRJp1JaIHEik6oRqtBklq408T3KHva3si+83P6IyeVN6yYiIRz03lcGjf4K0RxcbnvKrg4jx8kQppcBZSoXLRBYFWDkNWCwJMK1yuHITVeqxoamED1IKG0JuBLk3yCEbBOWhaCxaMBqXBDclHrylNXLYNQNYOa3M1O5Lx54mwsEhjJUoezQ5121ZEviVVKqChPeisIlPmEMRdiQEaHCJ/Wy2yMUm2EYVpSMIucG2FdXENHUmwScFjBmS7g23+R8lv7DxueGQYYDjlQYn88Tq4eYokVHZMrorOps+jno9Fjn2YRcCLE1Db+9isLc19B2Z6MwJYB0Ytc/Rvap01+SypLaJl2YA8PiE+3Ec792D8Ice2RuCXjek8GGS52KM/j7LK8BmedOgXMlKVS6t749Me4FZ7RVuo4j4av7vRel9cqx6+Ez1jwcJI0Bu4jgMgONgu2xtaWl2YXvAsaw2+3f+YWr1oF8x2v6dzESrWn1bDpDqyv5ndp3UrzMadLrkp1PZVFW59dcPATHYLtOpL7L509L+Z6jbvpZiP7tuH+Z1HP6aM5ALxc/PueSXEk7yaqkaNXJL4KqylRjDRFMmkt2C669OAGK9zjc1uT1OZUNYm3OAYG4RWtcWpG7kgFPRO45BkIkOCc9yjEqRJmnPd5orA3S1ClwGaXixy62m5LujVN03LtGZNB80SVhbnvYWhWFA3okSO1oo0dUWKMVgWgcXAJedlAxrHethuLq1YwlzmUNPatQV5rUjJfSvpFYswSgEkohLef3ZULkZNJt6sr92Xes595UrqLwAqpUqKrwkhS0qFy8euFBV4bUAFXBXg4yHYb2t4nwV3TNVnlykOWbo5VnoPCIrhyTaVcOQ2GKoxwRFJclBFR4YuKXyvTvsssMU7liCVIhIzRvo3n5K5mYQAoCTeprQHdZCNUVxfX5KMhHQJmFIOOhr3n75qYG2S3JjSBWzhVt9aWugzG1YjrVoNzaNHcM0FpDVKklzH48IF37wtZQAEMu628b/BbUttrC0sgMLcVMT3HFEifmO7hcLx0OKtvZzvVt9cdDRgOrt/IJdSkrZG06im/c9BPycSExsSM4Y3dmGTUgb3D3RwWJHY5xuRU8UlNzrnEuc4lxuSbnmUr68rIUmlkY66tZmm+UI1CWdBKX/ElXZNFM3WA6kGXEuVZ8OgVmTNU65gLakgfNeyElF6GO5ibZs04cb3BjN7teAGpVJicYzsip3lZU1OueauJO7hyCNJk05wj4nTUcCoZWm85nySJqUbATp1OSvDDa3Nd+gAGfE+CakQzbk8lYMA0qctOJ6KIsRWmJousLNFg0ZAfVLVW2Bk0sIK6ZeRSppWtOO9DIKkK60DXUEGqcKuAoK8esQqlWJUYl4wVUlcuWiCFy5csMJUFSuXjTgrNUrl4MKFK5csGFWrVkOyVC5DLQo2fveonGzVVC5eAepdiuVK5e4hrQvBzW7PfwoP5D/wBiuXJctUV0O7IzZnMpdcuWgz4kqzVy5eMGIK0Yf8OJyHzXLljHx0Z5+ZQYK5cmogl3i81pyVIWTuX1C5ctQEu8+uAArlK5aLOCsFy5ePLQuhlcuXjZFCglcuXhUj//2Q==');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 124, 76);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+
+}
+.water {
+  background-image: url('https://i.pinimg.com/170x/88/cf/cf/88cfcf70a516c00b069a0939810eebd2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(118, 215, 248);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.grass {
+  background-image: url('https://media.istockphoto.com/id/1313425810/video/green-glowing-background-with-loopable-elements-in-4k-video.jpg?s=640x640&k=20&c=m01VOk8G923FfIRt-0e1KOkDyFM84E25pM_mHzP3AJY=');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: greenyellow;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.poison {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiv7n-fb799d0b-66c7-4075-9312-f36f259600f0.png/v1/crop/w_173,h_250,x_0,y_0,scl_0.40845070422535,strp/poison_texture_by_metagross101_d6aiv7n-250t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvYmFmY2JiOGItNmFkYi00YjZiLTllOGItNjBlZDA3ZTE3YzMyXC9kNmFpdjduLWZiNzk5ZDBiLTY2YzctNDA3NS05MzEyLWYzNmYyNTk2MDBmMC5wbmciLCJ3aWR0aCI6Ijw9NDI2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.iWJn_KhI4D5pVMrLDRMMjvoYOuWX_pj-fRrhFLoS9qY');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(133, 213, 133);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.electric {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30751457-a50b-4f4c-a9f2-5a8ee5504f89/d6awe5m-d41ba327-6970-4ab7-8353-6f236d203006.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNzUxNDU3LWE1MGItNGY0Yy1hOWYyLTVhOGVlNTUwNGY4OVwvZDZhd2U1bS1kNDFiYTMyNy02OTcwLTRhYjctODM1My02ZjIzNmQyMDMwMDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AUmy6I5dg6CxX8xfTeDtVElZ_nv9mn5hbsOsGjl1cUw');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: gold;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.ground {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiv12-db33a9c2-3c51-4ed0-b65a-c519a9a742ca.png/v1/fill/w_175,h_250,strp/ground_texture_by_metagross101_d6aiv12-250t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE1IiwicGF0aCI6IlwvZlwvYmFmY2JiOGItNmFkYi00YjZiLTllOGItNjBlZDA3ZTE3YzMyXC9kNmFpdjEyLWRiMzNhOWMyLTNjNTEtNGVkMC1iNjVhLWM1MTlhOWE3NDJjYS5wbmciLCJ3aWR0aCI6Ijw9NDMwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.EYPtV1PwoOvXrv2Xr0zy0lf6nmgyxGSQFkB7g-482Es');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffdc90;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.rock {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/358/947/693/abstract-3d-orange-brown-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #9f9474;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.psychic {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30751457-a50b-4f4c-a9f2-5a8ee5504f89/d6avgzc-7dc37808-16b9-435c-a48c-aebfd5bf0787.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNzUxNDU3LWE1MGItNGY0Yy1hOWYyLTVhOGVlNTUwNGY4OVwvZDZhdmd6Yy03ZGMzNzgwOC0xNmI5LTQzNWMtYTQ4Yy1hZWJmZDViZjA3ODcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9kYqHRUl7WVS_H0KkNGObHze441A6DMMbHp3n4-e6RM');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(153, 102, 153);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.ice {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30751457-a50b-4f4c-a9f2-5a8ee5504f89/d6b2hrx-dba602ef-208c-4fd9-ad4b-6c118337f35c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNzUxNDU3LWE1MGItNGY0Yy1hOWYyLTVhOGVlNTUwNGY4OVwvZDZiMmhyeC1kYmE2MDJlZi0yMDhjLTRmZDktYWQ0Yi02YzExODMzN2YzNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Shl_HWYg5lj218dtA5kWyz2HfM487___gLHPptiZBzI');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(135, 235, 250);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.bug {
+  background-image: url('https://i2.wp.com/pixahive.com/wp-content/uploads/2021/02/Green-abstract-background-wallpaper-325460-pixahive.jpg?fit=2560%2C1440&ssl=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(75, 200, 119);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.ghost {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiuus-3fe6c676-7bfe-4fac-ae3e-4766f488d001.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JhZmNiYjhiLTZhZGItNGI2Yi05ZThiLTYwZWQwN2UxN2MzMlwvZDZhaXV1cy0zZmU2YzY3Ni03YmZlLTRmYWMtYWUzZS00NzY2ZjQ4OGQwMDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.QCgk4AePBjKShjvh5_shUG9fk7LCo6R6JkJB712FqGE');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(144, 118, 144);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.steel {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c938f85-f834-4bb3-b3b2-97d295769464/d4kzalw-7e8dc7cc-346c-4e5a-af22-e61f9f5f526f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNjOTM4Zjg1LWY4MzQtNGJiMy1iM2IyLTk3ZDI5NTc2OTQ2NFwvZDRremFsdy03ZThkYzdjYy0zNDZjLTRlNWEtYWYyMi1lNjFmOWY1ZjUyNmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ohGh4AE2qHTp1iQXbE1HCjOHz4qwafMYYCuOxR0g124');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: silver;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.dragon {
+  background-image: url('https://i.pinimg.com/236x/0d/40/31/0d4031136ada8d15c793ce6f02c3d120--fly-moon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #eed99b;
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+.dark {
+  background-image: url('data:image/jpeg;base64,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');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(215, 132, 215);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+
+}
+.fairy {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiuby-5741a594-3fbd-4d86-991a-449e6bcf989b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JhZmNiYjhiLTZhZGItNGI2Yi05ZThiLTYwZWQwN2UxN2MzMlwvZDZhaXVieS01NzQxYTU5NC0zZmJkLTRkODYtOTkxYS00NDllNmJjZjk4OWIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WWnKJ8jllU2avrbl_7F8SOUSrm_0m_Urc7ELG91sjPw');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(250, 209, 215);
+  font-weight: 500;
+  font-size: x-large;
+  border-radius: .7rem .7rem 0 0;
+}
+
+/* ---Special adjustments due colors of pokemon types */
+.pokeName-text {
+  background-color:
+    black;
+  background-image: none;
+  border-radius: 0;
+}
+
+.pokemonBackground {
+  position: relative;
+}
+
+.pokemonsSize {
+  width: 200px;
+  height: 200px;
+}
+
+.stats {
+  background-image: none;
+  font-size: x-large;
+  text-shadow: 1px 3px 2px #0C0C0C;
+  -webkit-text-stroke: .3px black;
+}
+
+.singleCard:hover .stats {
+  font-size: xx-large;
+}
+
+.singleCard:hover .types-text {
+  padding-top: 0.2rem;
+}
+
+.stat-types {
+  color: lavenderblush;
+  font-weight: bolder;
+  text-shadow: 3px 3px 3px black;
+  min-width: 150px;
+  width: 160px;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 1px 1px 3px 3px black;
+}
+.stat-types:hover{
+  transition: 1s;
+ position: relative;
+ bottom: 4px ;
+  box-shadow: 1px 1px 3px 3px gold;
+}
+
+.singlePokemon-background {
+  position: absolute;
+  width: 100%;
+  height: 25vw;
+  border-radius: 0px;
+  margin-bottom: 4.5rem;
+}
+
+/*  */
+@media only screen and (min-width: 800px) {
+  .drk-btn {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    z-index: 200;
+    color: var(--sun);
+  }
+
+  /* ---Header----- */
+  .red {
+    top: 0;
+    left: 0;
+    height: 123.18px;
+  }
+  .dex {
+    width: 431px;
+    height: 76px;
+    left: 33px;
+    top: 47px;
+  }
+  .black {
+    width: 100%;
+    top: 111.3px;
+    height: 49.7px;
+  }
+  .white-circle {
+    width: 117px;
+    height: 117px;
+    right: 58px;
+    top: 48px;
+  }
+  .black-circle {
+    width: 63px;
+    height: 63px;
+    right: 85px;
+    top: 75px;
+  }
+
+
+  /* --------Footer------- */
+  .footer {
+    z-index: -1;
+  }
+  .redFooter {
+    height: 123.18px;
+    left: 0px;
+    top: 490px;
+  }
+  .blackFooter {
+    height: 69px;
+    left: 0px;
+    top: 582px;
+  }
+  .white-circleFooter {
+    width: 117px;
+    height: 117px;
+    right: 80px;
+    top: 514px;
+  }
+  .black-circelFooter {
+    width: 63px;
+    height: 63px;
+    right: 108px;
+    top: 541px;
+  }
+
+  /* ----InputName----- */
+  .InputName {
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .img-container {
+    z-index: 100;
+    height: 99.9vh;
+    overflow: hidden;
+    min-width: 550px;
+  }
+  .imgFront {
+    height: 100%;
+  }
+  .img-ball {
+    bottom: -66vh;
+  }
+  .ball {
+    max-width: 50vw;
+  }
+  .container {
+    top: 190px
+  }
+
+
+  /* --- Pokedex----- */
+  .Pokedex-container {
+    position: relative;
+    top: 159px;
+    background-color: var(--background-color-wh);
+  }
+  .welcome-message {
+    padding: 1rem;
+    color: var(--secondary-color-bl)
+  }
+  .welcome-text {
+    color: var(--text-primary-bl);
+    font-size: medium;
+    font-weight: 400;
+  }
+  .form-SearchPokemon {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    align-items: center;
+  }
+  .pkdx-inputSearch {
+    height: 2rem;
+    padding: .3rem;
+    border-radius: .5rem;
+    box-shadow: .5px 2px 4px .2px var(--text-terciary-gr)
+  }
+  .pkdx-btn {
+    height: 2rem;
+    padding: .25rem;
+    border-radius: .5rem;
+    color: #FFFFFF;
+    border: var(--border-btn) 2px solid;
+    background-color: var(--primary-color-rd);
+    font-size: large;
+  }
+
+
+  /* ---PokedexId--- */
+  .goBack-btn{
+    top: 180px;
+    z-index: 200;
+    padding: .4rem;
+    font-size: larger;
+  }
+  .pkdx{
+    top: 260px;
+    padding: .7rem;
+    transition: .5s;
+  }
+  .prev{
+    width: 90px;
+  }
+  .pokedexId-container {
+    position: relative;
+    top: 180px;
+  }
+
+
+
+  /* ---PokemonNotFounded */
+.pokemonNotFounded{
+  top: 160px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 160px) ;
+}
+.charizard{
+  max-width: 65vh;
+  margin-left: 2rem;
+}
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .ball {
+    max-width: 45vw;
+  }
+}
