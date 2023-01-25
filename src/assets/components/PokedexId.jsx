@@ -114,7 +114,9 @@ const PokedexId = () => {
                             <p className='pkdx-typeInfo'>
                                 <h2 className='grayLetters'>Skills:</h2>
                                 <h2 className='skills-descr'>{pokemon.abilities[0]?.ability.name.charAt(0).toUpperCase() + pokemon.abilities[0]?.ability.name.slice(1)}</h2>
-                                <h2 className='skills-descr' >{pokemon.abilities[1]?.ability.name.charAt(0).toUpperCase() + pokemon.abilities[1]?.ability.name.slice(1)}</h2>
+                                {pokemon.abilities[1]?.ability.name ? (  <h2 className='skills-descr' >
+                                    pokemon.abilities[1]?.ability.name.charAt(0).toUpperCase() + pokemon.abilities[1]?.ability.name.slice(1)
+                                    </h2>) :(null)}
                             </p>
                         </div>
                         {/* -Stats */}

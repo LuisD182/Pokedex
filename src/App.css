@@ -468,6 +468,10 @@ body {
   text-align: center;
   border-radius: 1rem;
 }
+.noSkill{
+  display: none;
+  visibility: hidden;
+}
 .skills-descr:hover{
   transition: 1s;
  position: relative;
